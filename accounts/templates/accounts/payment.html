@@ -1,0 +1,72 @@
+{%extends 'accounts/main.html'%}
+{% block content %}
+
+
+
+
+<form action="#" method="post">
+   {% csrf_token %}
+  <h2>Register Payment</h2>
+    <p>
+      <label for="shares" class="floatLabel">Shares</label>
+       {{form.shares}}
+    </p>
+
+
+    <p>
+    <label for="savings" class="floatLabel">Savings</label>
+       {{form.savings}}
+     </p>
+
+
+
+    <p>
+      <label for="loan" class="floatLabel">Loan</label>
+     {{form.loan}}
+       
+    </p>
+
+
+
+    <p> 
+      <label for="rss" class="floatLabel">RSS</label>
+    {{form.rss}}
+      
+    </p>
+
+
+    <p> 
+      <label for="buildingfund" class="floatLabel">Building Fund</label>
+    {{form.buildingfund}}
+      
+    </p>
+
+
+    <p> 
+      <label for="investment1" class="floatLabel">Investment One</label>
+    {{form.investment1}}
+      
+    </p>
+
+     <p> 
+      <label for="investment2" class="floatLabel">Investment Two</label>
+    {{form.investment2}}
+      
+    </p>
+
+
+
+
+
+    <p>
+      <input type="submit" value="Register Payment" id="submit">
+    </p>
+  </form>
+  {{form.errors}}
+
+
+
+  
+</form>
+
+{%endblock content %}

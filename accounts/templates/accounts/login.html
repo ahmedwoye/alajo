@@ -1,0 +1,108 @@
+ 
+    {% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+ <title>Login | C. I.C.S </title>
+      <!-- Meta tags -->
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="keywords"/>
+      <script>
+         addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); }
+      </script>
+      <!-- Meta tags -->
+      <!--stylesheets-->
+   <link href="{% static '/BootStrap/css/style.css' %}" rel='stylesheet' type='text/css' media="all">
+      
+      <link rel="stylesheet" href="{% static '/BootStrap/css/bootstrap.css' %}">    
+<link rel="stylesheet" href="{% static '/BootStrap/css/bootstrap-theme.min.css' %}">
+<script src="/BootStrap/js/bootstrap.min.js"></script>
+      
+      <!--//style sheet end here-->
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+</head>
+<body>
+   <div id="login" >
+      <div class="mid-class">
+         <div class="art-right-w3ls">
+            <h2>Sign In</h2>
+             <form action="#" method="post">
+               {% csrf_token %}
+                
+            
+                    
+               
+               <div class="main">
+                  <div class="form-left-to-w3l">
+                     <input type="text" name="username" placeholder="Username" required="">
+                  </div>
+                  <div class="form-left-to-w3l ">
+                     <input type="password" name="password" placeholder="Password" required="">
+                     <div class="clear"></div>
+                  </div>
+               </div>
+               <!-- <div class="left-side-forget"> -->
+                  <!-- <input type="checkbox" class="checked"> -->
+                  <!-- <span class="remenber-me">Remember me </span> -->
+               <!-- </div> -->
+               <!-- <div class="right-side-forget"> -->
+                  <!-- <a href="#" class="for">Forgot password...?</a> -->
+               <!-- </div> -->
+               <!-- <div class="clear"></div> -->
+               <div class="btnn">
+                  <button type="submit">Sign In</button>
+               </div>
+            </form>
+
+{%for message in messages%}
+<p id="messages">{{message}} </p>
+	{% endfor %}
+
+            <!-- popup-->
+            <div id="content1" class="popup-effect">
+               <div class="popup">
+                  <!--login form-->
+                  <div class="letter-w3ls">
+                     <form action="#" method="post">
+                        <div class="form-left-to-w3l">
+                           <input type="text" name="name" placeholder="Username" required="">
+                        </div>
+                        <div class="form-left-to-w3l">
+                           <input type="text" name="username" placeholder="Phone" required="">
+                        </div>
+                        <div class="form-left-to-w3l">
+                           <input type="email" name="email" placeholder="Email" required="">
+                        </div>
+                        <div class="form-left-to-w3l">
+                           <input type="password" name="password" placeholder="Password" required="">
+                        </div>
+                        <div class="form-left-to-w3l margin-zero">
+                           <input type="password" name="password" placeholder="Confirm Password" required="">
+                        </div>
+                        <div class="btnn">
+                           <button type="submit">Sign Up</button>
+                           <br>
+                        </div>
+                     
+                     <div class="clear"></div>
+                  </div>
+                  <!--//login form-->
+                  <a class="close" href="#">&times;</a>
+               </div>
+            </div>
+            <!-- //popup -->
+         </div>
+         <div class="art-left-w3ls">
+            <img src="{%  static 'images/naira1.jpg'  %}">
+         </div>
+      </div>
+      <footer class="bottem-wthree-footer">
+         <p>
+            ©2020 Design By Woye Ahmed
+         </p>
+      </footer>
+      </div>
+   </body>
+</html>
