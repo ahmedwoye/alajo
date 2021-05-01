@@ -73,8 +73,8 @@ def customer(request, pk_test):
     order_count = orders.count()
 
 
-    myFilter = OrderFilter()
-    context = {'customer': customer, 'orders':orders, 'order_count': order_count, 'myFilter': myFilter }
+    #myFilter = OrderFilter()
+    context = {'customer': customer, 'orders':orders, 'order_count': order_count }
     return render(request, 'accounts/customer.html', context)
 
 
